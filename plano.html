@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flamenco — Cultura Espanhola</title>
+  <meta name="description" content="Site informativo sobre o Flamenco: história, música, dança, trajes e instrumentos.">
+  <style>
+    :root{
+      --vermelho:#b71c1c; /* deep red */
+      --amarelo:#ffca28; /* warm yellow */
+      --bg:#fff7eb;
+      --texto:#2b2b2b;
+      --card-bg: rgba(255,255,255,0.85);
+      --max-width:1100px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg),#fff);color:var(--texto);scroll-behavior:smooth}
+    header{background:linear-gradient(90deg,var(--vermelho),#8b0000);color:var(--amarelo);padding:28px 16px 36px;position:sticky;top:0;z-index:40;box-shadow:0 6px 18px rgba(0,0,0,0.12)}
+    .container{max-width:var(--max-width);margin:0 auto}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .brand .logo{width:56px;height:56px;border-radius:8px;background:linear-gradient(135deg,var(--amarelo),#ffd54f);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--vermelho);box-shadow:0 4px 12px rgba(0,0,0,0.12)}
+    nav a{color:rgba(255,255,255,0.95);text-decoration:none;font-weight:600;padding:8px 12px;border-radius:8px}
+    nav a:hover{background:rgba(255,255,255,0.08)}
+
+    /* Hero */
+    .hero{padding:48px 16px 64px;display:grid;grid-template-columns:1fr;gap:20px;align-items:center}
+    .hero-inner{display:flex;flex-direction:column;gap:12px}
+    h1{font-size:clamp(26px,4vw,44px);margin:0;color:var(--amarelo);text-shadow:0 3px 0 rgba(0,0,0,0.08)}
+    p.lead{margin:0;font-size:1.05rem;color:#fff8e1;max-width:760px}
+    .cta{margin-top:8px}
+    .btn{display:inline-block;background:var(--amarelo);color:var(--vermelho);padding:10px 16px;border-radius:999px;font-weight:700;text-decoration:none}
+
+    /* Sections */
+    section{padding:56px 16px}
+    .card{background:var(--card-bg);backdrop-filter:blur(6px);padding:22px;border-radius:14px;box-shadow:0 8px 24px rgba(0,0,0,0.06)}
+    .grid{display:grid;gap:20px}
+    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+
+    h2{margin-top:0;color:var(--vermelho)}
+    .muted{color:#563d2b}
+
+    /* visual elements */
+    .figure{height:220px;border-radius:12px;overflow:hidden;background-image:linear-gradient(135deg,rgba(0,0,0,0.05),rgba(0,0,0,0.02));display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff}
+
+    /* Footer */
+    footer{padding:28px 16px;background:linear-gradient(90deg,#fff8e1,#fff);border-top:4px solid var(--amarelo)}
+
+    /* Responsive */
+    @media (min-width:800px){
+      .hero{grid-template-columns:1fr 420px}
+      .figure{height:320px}
+    }
+
+    /* small niceties */
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(183,28,28,0.08);color:var(--vermelho);font-weight:700}
+    .list{margin:0;padding-left:18px}
+    .nav-toggle{display:none}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">FL</div>
+        <div>
+          <div style="font-weight:800">Flamenco</div>
+          <div style="font-size:.85rem;color:rgba(255,255,255,0.9)">Cultura e tradição espanhola</div>
+        </div>
+      </div>
+      <nav aria-label="Navegação principal">
+        <a href="#historia">História</a>
+        <a href="#musica">Música</a>
+        <a href="#baile">Baile</a>
+        <a href="#trajes">Trajes</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="card">
+          <h1>Flamenco — alma, ritmo e movimento</h1>
+          <p class="lead">O flamenco é uma expressão artística originária do sul da Espanha — especialmente da Andaluzia — que combina canto, guitarra, dança e palmas. Neste site você encontrará informações sobre sua história, estilos (palos), instrumentos, trajes típicos e a importância cultural do flamenco nos festivais espanhóis.</p>
+          <div class="cta"><a class="btn" href="#historia">Começar a explorar</a></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="figure card" aria-hidden="false" style="padding:0">
+  <img src="https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf" alt="Guitarrista flamenco" style="width:100%;height:100%;object-fit:cover;">
+</div>
+            <div style="margin-top:8px;color:var(--vermelho);font-weight:700">Guitarra & Palmas</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="historia">
+      <div class="container card">
+        <h2>História</h2>
+        <p class="muted">O flamenco tem raízes complexas: é fruto de uma mistura de tradições ciganas (gitano), mouriscas, judaicas e cristãs que se desenvolveram ao longo dos séculos na Andaluzia. Cresceu como forma de expressão popular, ligada a festas, tabernas e apresentações íntimas — até tornar-se uma arte reconhecida internacionalmente.</p>
+        <div style="margin-top:12px">Principais marcos históricos:</div>
+        <ul class="list">
+          <li>séculos XVIII–XIX: consolidação do cante jondo e primeiros registros escritos;</li>
+          <li>século XX: profissionalização, casas de flamenco e espetáculos teatrais;</li>
+          <li>anos recentes: reconhecimento global e inclusão em eventos culturais.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="musica">
+      <div class="container grid cols-2">
+        <div class="card">
+          <h2>Música (Cante e Toque)</h2>
+          <p class="muted">A música do flamenco é marcada pelo cante (canto) e pelo toque (guitarra). Existem muitos "palos" (estilos) — como soleá, bulería, tangos e seguiriyas — cada um com andamento, compasso e emoção próprios.</p>
+          <h3>Instrumentos</h3>
+          <ul class="list">
+            <li>Guitarra flamenca — técnica e rasgueados característicos;</li>
+            <li>Cajón — caixa rítmica muito usada nas formas modernas;</li>
+            <li>Palmas e pitos — marcação rítmica e resposta ao cante;</li>
+            <li>Castanholas e o uso ocasional de percussão adicional.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2>Como ouvir</h2>
+          <p class="muted">Ao ouvir flamenco, preste atenção nas nuances do compasso, na intensidade emocional do cante e na interação entre guitarrista e cantor. Em apresentações ao vivo, a improvisação — sobretudo na dança — é parte essencial.</p>
+          <div style="margin-top:12px"><span class="badge">Dica</span> Busque gravações clássicas de artistas andaluzes e apresentações ao vivo para sentir a intensidade do estilo.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="baile">
+      <div class="container card">
+        <h2>Baile (Dança)</h2>
+        <p class="muted">O baile flamenco combina postura, marcação dos pés (zapateado), braços e expressão facial. Há variações entre solistas, duos e grupos; a interação com o cante e a guitarra é central — a dança conversando com a música.</p>
+        <h3>Elementos da dança</h3>
+        <ul class="list">
+          <li>Zapateado — percussão dos pés que cria padrões rítmicos;</li>
+          <li>Braceo — movimentos expressivos dos braços e mãos;</li>
+          <li>Expressão — intensidade emocional e contato visual com o público;</li>
+          <li>Improvisação dentro das estruturas rítmicas dos palos.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="trajes">
+      <div class="container grid cols-2">
+        <div class="card">
+          <h2>Trajes e Estética</h2>
+          <p class="muted">Os trajes típicos reforçam a identidade visual do flamenco: vestidos longos com babados (bata de cola) para as mulheres, e trajes elegantes (chaqué, calças justas e sapatos de salto firme) para os homens. As cores vermelhas e amarelas também aparecem em acessórios, leques e rosas — símbolos visuais fortes.</p>
+          <h3>Acessórios</h3>
+          <ul class="list">
+            <li>Leque (abanico) — usado tanto para beleza quanto para ritmo;</li>
+            <li>Peineta e mantilha — enfeites tradicionais do cabelo;</li>
+            <li>Sapatos de flamenco — solado reforçado para o zapateado;</li>
+            <li>Adornos: flores, joias e cintos.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="figure" role="img" aria-label="Traje de flamenco" style="padding:0">
+  <img src="https://images.unsplash.com/photo-1483794344563-d27a8d18014e" alt="Traje tradicional espanhol de flamenco" style="width:100%;height:100%;object-fit:cover;">
+</div>
+              <div style="margin-top:6px;font-weight:700;color:var(--vermelho)">Traje tradicional</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="festivais">
+      <div class="container card">
+        <h2>Festivais e Celebrações</h2>
+        <p class="muted">O flamenco está presente em feiras e festivais, como a famosa Feria de Abril em Sevilha e vários festivais de flamenco na Andaluzia e no mundo. Essas celebrações mantêm viva a tradição e mostram tanto mestres consagrados quanto novos talentos.</p>
+      </div>
+    </section>
+
+    <section id="aprender">
+      <div class="container grid cols-2">
+        <div class="card">
+          <h2>Quer aprender?</h2>
+          <p class="muted">Procure aulas presenciais em escolas de dança ou estúdios especializados. O aprendizado envolve técnica de pés, postura, coordenação com a guitarra e entendimento dos palos. A prática com músicos ao vivo acelera o progresso.</p>
+          <ol class="list">
+            <li>Comece com palmas e compasso para internalizar o ritmo;</li>
+            <li>Treine zapateado com exercícios curtos e repetitivos;</li>
+            <li>Assista a apresentações ao vivo e grave-se dançando para corrigir postura;</li>
+          </ol>
+        </div>
+        <div class="card">
+          <h2>Recursos</h2>
+          <p class="muted">Livros, vídeos e gravações históricas são ótimos recursos. Participe de rodas, encontros e festivais para vivenciar o flamenco em comunidade.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato">
+      <div class="container card">
+        <h2>Contato</h2>
+        <p class="muted">Se você quiser mais informações, indicações de livros, playlists ou sugestões de aulas, entre em contato.</p>
+        <form onsubmit="event.preventDefault();alert('Obrigado! Esta é uma demonstração.');" style="display:flex;flex-direction:column;gap:10px;max-width:560px">
+          <input required placeholder="Seu nome" style="padding:10px;border-radius:8px;border:1px solid #e0e0e0">
+          <input required type="email" placeholder="Seu e-mail" style="padding:10px;border-radius:8px;border:1px solid #e0e0e0">
+          <textarea required placeholder="Mensagem" rows="4" style="padding:10px;border-radius:8px;border:1px solid #e0e0e0"></textarea>
+          <button type="submit" class="btn">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <div>
+        <strong>Flamenco</strong> — Cultura Espanhola • Feito com ❤️
+      </div>
+      <div style="font-size:.9rem;color:#4a4a4a">Direitos autorais © <span id="ano"></span></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
